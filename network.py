@@ -81,12 +81,9 @@ def relu(x):
 def relu_prime(x):
     return np.heaviside(x, 1)
 
-def test():
+if __name__ == "__main__":
     net = Network(layers=[784, 30, 30, 10])
     net.train(number_of_epochs=30, learning_rate=.03, batch_size=10)
-
-if __name__ == "__main__":
-    test()
 
 
 
