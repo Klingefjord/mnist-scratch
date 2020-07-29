@@ -4,7 +4,7 @@ Reached ~96% accuracy using supplied hyperparams
 
 ## How to run
 `pip install numpy`
-`python network.py
+`python network.py`
 
 Hyperparameters can be edited in the `main` method
 
