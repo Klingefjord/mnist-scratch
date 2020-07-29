@@ -37,8 +37,6 @@ class Network():
         bias_gradients = [np.zeros(biases_in_layer.shape) for biases_in_layer in self.biases]
 
         loss = (activations[-1] - expected_values) * relu_prime(outputs[-1])
-        weight_gradients[-1] = np.dot(loss, activations[-2].T)
-        bias_gradients[-1] = loss
 
         for l in reversed(range(self.layer_count - 1)):
             loss = loss if l == self.layer_count - 2 else np.dot(self.weights[l + 1].T, loss) * relu_prime(outputs[l])
